@@ -70,8 +70,8 @@ export function CreatePlaylistStyle(props) {
 
     return (
 
-        <SectionForm onSubmit={props.onSubmit}>
-            <Form>
+        <SectionForm>
+            <Form onSubmit={props.onSubmit}>
                 <Head>Crie sua playlist </Head>
                 <input
                     name='playlistName'
@@ -80,7 +80,7 @@ export function CreatePlaylistStyle(props) {
                     value={props.playlistName}
                     placeholder='nome da playlist'
                 />
-                <button>criar</button>
+                <button type="submit">criar</button>
             </Form>
         </SectionForm>
 
