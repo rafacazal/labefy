@@ -24,7 +24,6 @@ export default function CreatePlaylist() {
     console.log(form)
     dispatch(createPlaylist(form.playlistName))
     setForm(initialState)
-
   };
 
 

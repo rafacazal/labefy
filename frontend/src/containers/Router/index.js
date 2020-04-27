@@ -2,7 +2,7 @@ import React from 'react';
 import { ConnectedRouter } from "connected-react-router";
 import { Switch, Route } from "react-router-dom";
 import HomePage from '../../components/HomePage';
-import ListenPlaylist from '../../components/ListenPlaylist';
+import ListenPlaylist from '../../components/Playlists';
 
 export const routes = {
   root: "/",
