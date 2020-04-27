@@ -3,15 +3,23 @@ import styled from 'styled-components';
 import 'normalize.css';
 
 
+export const Head = styled.h2`
+ font-size: 20px;
+ color: #d4d4d4;
+ margin-bottom: 10px;
+ text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+`
+
+
 export const SectionForm = styled.div`
-  margin-left: 80px;
-  margin-bottom: 80px;
+  position: absolute;
+  left: 35%;
+  bottom: 40%;
   width: 100%;
   display: flex;
-  position: absolute;
-  bottom: 39%;
-  max-width: 600px; 
-  max-height: 200px;
+  max-width: 300px; 
+  max-height: 250px;
   text-align: center;
 `
 
@@ -39,8 +47,8 @@ export const Form = styled.form`
         border-radius: 8px;
         color: #ffff;
         font-weight: 600;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 20px;
         cursor: pointer;
         display: inline-block;
         text-align: center;
@@ -56,33 +64,39 @@ export const Form = styled.form`
 }
 `
 
-export const Head = styled.h2`
- font-size: 20px;
- color: #d4d4d4;
- margin-bottom: 10px;
- text-align: center;
- font-family: Arial, Helvetica, sans-serif;
-`
 
-
-
-export function CreatePlaylistStyle(props) {
+export function AddMusicStyle(props) {
 
     return (
 
         <SectionForm onSubmit={props.onSubmit}>
             <Form>
-                <Head>Crie sua playlist </Head>
+                <Head>Adcione músicas </Head>
                 <input
-                    name='playlistName'
+                    name='musicName'
                     type="text"
                     onChange={props.onChange}
-                    value={props.playlistName}
-                    placeholder='nome da playlist'
+                    value={props.musicName}
+                    placeholder='música'
                 />
-                <button>criar</button>
+                <input
+                    name='artName'
+                    type="text"
+                    onChange={props.onChange}
+                    value={props.artName}
+                    placeholder='artista/banda'
+                />
+                <input
+                    name='url'
+                    type="text"
+                    onChange={props.onChange}
+                    value={props.url}
+                    placeholder='url da música'
+                />
+                <button>adcionar</button>
             </Form>
         </SectionForm>
+
 
 
     )

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
-import { CreatePlaylistStyle } from './style';
-import { createPlaylist } from '../../actions/playlist';
+import { AddMusicStyle } from './style';
 
 
-export default function CreatePlaylist() {
+export default function AddMusic() {
 
   const initialState = {
-    playlistName: ''
+    musicName: '',
+    artName: '',
+    url: ''
   }
 
   const [form, setForm] = useState(initialState)
@@ -22,16 +23,16 @@ export default function CreatePlaylist() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(form)
-    dispatch(createPlaylist(form.playlistName))
     setForm(initialState)
 
   };
 
-
   return (
     <>
-      <CreatePlaylistStyle
-        playlistName={form.playlistName}
+      <AddMusicStyle
+        musicName={form.musicName}
+        artName={form.artName}
+        url={form.url}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />

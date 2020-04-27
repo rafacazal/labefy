@@ -5,7 +5,7 @@ const initialState = {
 }
 
 
-const playlists = (state = initialState, action) => {
+export const playlists = (state = initialState, action) => {
     switch(action.type) {
         case 'SET_ALL_POSTS':
             const list = action.payload.allPlaylists;
